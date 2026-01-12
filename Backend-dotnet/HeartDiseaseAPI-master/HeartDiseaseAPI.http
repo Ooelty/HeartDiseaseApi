@@ -1,0 +1,68 @@
+@HeartDiseaseAPI_HostAddress = https://localhost:7225
+
+
+POST {{HeartDiseaseAPI_HostAddress}}/api/patient
+Content-Type: application/json
+
+{
+    "lastName": "Doe",
+    "firstName": "John",
+    "email": "Sara@gmail.com",
+    "password": "Password123!",
+    "age": 45,
+    "sex": "12",
+    "height": 175,
+    "weight": 80,
+    "bloodPressureLow": 80,
+    "bloodPressureHigh": 120,
+    "cholesterol": 200,
+    "glucose": 90,
+    "isSmoker": false,
+    "isAlcoholic": false,
+    "isActive": true
+}
+
+
+###
+
+@id=683684dcda33b3ea778a1461
+DELETE {{HeartDiseaseAPI_HostAddress}}/api/patient/{{id}}
+{
+
+}
+###
+
+GET {{HeartDiseaseAPI_HostAddress}}/api/patient/{{id}}
+
+###
+
+POST {{HeartDiseaseAPI_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+
+ {
+ 
+  "email": "john.doe@example.com",
+  "password": "SecurePassword123!"
+}
+
+###
+
+POST {{HeartDiseaseAPI_HostAddress}}/api/patient/predict
+Content-Type: application/json
+
+{
+  "age": 30,
+  "sex": "M",
+  "height": 170,
+  "weight": 70,
+  "bloodPressureLow": 120,
+  "bloodPressureHigh": 300,
+  "cholesterol": 200,
+  "glucose": 85,
+  "isSmoker": false,
+  "isAlcoholic": false,
+  "isActive": true
+}
+
+###

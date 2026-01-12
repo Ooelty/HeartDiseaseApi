@@ -1,0 +1,16 @@
+# React / Node
+node_modules/
+build/
+dist/
+
+# .NET
+bin/
+obj/
+
+# ML / Python
+__pycache__/
+*.pkl
+*.joblib
+*.h5
+venv/
+.env
